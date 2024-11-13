@@ -1,0 +1,20 @@
+#version: "3.8"
+#services:
+#  api:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      - BROKER_LIST=redpanda:9092
+#    depends_on:
+#      - redpanda
+#
+#  redpanda:
+#    image: docker.vectorized.io/vectorized/redpanda:v21.11.1
+#    ports:
+#      - "9092:9092"
+#    command:
+#      - redpanda start --smp 1 --memory 1G --reserve-memory 0M --overprovisioned
+#      - --kafka-addr PLAINTEXT://0.0.0.0:9092

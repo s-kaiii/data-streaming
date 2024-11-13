@@ -1,0 +1,9 @@
+server:
+  address: ":8080"
+
+kafka:
+  brokers: ["localhost:9092"]
+  topic_prefix: "streams"
+
+logger:
+  level: "info"
